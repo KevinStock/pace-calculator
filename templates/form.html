@@ -1,0 +1,54 @@
+{% extends "layout.html" %}
+
+{% block content %}
+<div id="time_input">
+    <div class="form-left">
+        <strong>Time</strong>
+    </div>
+    
+    <div class="form-right">
+        <form method="post">
+            <input type="number" name="time_hours" value="0" />
+            <input type="number" name="time_minutes" value="0" />
+            <input type="number" name="time_seconds" value="0" />
+            <input type="submit" />
+    </div>
+</div>
+
+<div id="distance_input">
+    <div class="form-left">
+        <strong>Distance</strong>
+    </div>
+    
+    <div class="form-right">
+            <input type="number" name="distance" value="0"/>
+            <select name="unit">
+                <option value="mile">Miles</option>
+                <option value="kilometer">Kilometers</option>
+            </select>
+            <br />
+            or
+            <select name="event">
+                <option value="none">Pick Event</option>
+                {% for event in events %}
+                <option value="{{ event[1] }}">{{ event[0] }}</option>
+                {% endfor %}
+            </select>
+            <input type="submit" />
+    </div>
+</div>
+
+<div id="pace_input">
+    <div class="form-left">
+        <strong>Pace</strong>
+    </div>
+    
+    <div class="form-right">
+            <input type="number" name="pace_hours" value="0" />
+            <input type="number" name="pace_minutes" value="0" />
+            <input type="number" name="pace_seconds" value="0" />
+            <input type="submit" />
+        </form>
+    </div>
+</div>
+{% endblock %}

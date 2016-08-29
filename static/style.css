@@ -1,0 +1,11 @@
+body {
+    width: 80vw;
+    text-align: center;
+}
+
+.form-left {
+    float: left;
+    width: 35px;
+    background-color: blue;
+    color: white;
+}
